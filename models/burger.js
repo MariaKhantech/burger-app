@@ -1,7 +1,5 @@
-const orm = require("orm");
+const orm = require('orm');
 
-selectAll()
-insertOne()
-updateOne()
-
-module.exports = burger;
+selectAll();
+insertOne();
+updateOne();
