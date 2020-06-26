@@ -1,9 +1,23 @@
-const orm = require("orm");
-const require = ("/config/dbConnection.js");
+const orm = require('orm');
+const connection = require('./dbConnection');
+const require = '/config/dbConnection.js';
 
-selectAll()
-insertOne()
-updateOne()
+const selectAll = {
+	selectAll: (table, callback) => {
+		const query = `SELECT * FROM ${table}`;
 
+		//connect to the database of the query
+		connection.query(query, (err, res) => {
+			if (err) {
+				throw err;
+			}
+			callback(res);
+		});
+	}
+};
 
-module.exports = orm;
+// insertOne();
+
+// updateOne();
+
+//module.exports = orm;

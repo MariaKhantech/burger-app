@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const connection = require('./config/dbConnection');
 
 // We will be using the npm package "dotenv" to allow us to use our database credentials but prevent them from beeing pushed to github.
 // there are steps to configure dotenv:
