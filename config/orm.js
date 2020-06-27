@@ -1,6 +1,5 @@
 const orm = require('orm');
 const connection = require('./dbConnection');
-const { query } = require('express');
 const require = '/config/dbConnection.js';
 
 //selects all the burgers from the database
@@ -32,6 +31,11 @@ const deleteOne = (table, id) => {
 };
 
 //created object relational mapper (orm)
-const orm = { selectAll, insertOne, updateOne, deleteOne };
+const orm = {
+	selectAll,
+	insertOne,
+	updateOne,
+	deleteOne
+};
 
 module.exports = orm;
