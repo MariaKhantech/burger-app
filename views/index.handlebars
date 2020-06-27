@@ -1,0 +1,62 @@
+<div class = "container">
+
+    {{!-- this is the jumbotron--}}
+    {{!-- <div class="jumbotron  text-center" style='background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);'> --}}
+
+    <div class="jumbotron text-success font-weight-bold text-center" style='background-image: url(https://miro.medium.com/max/1400/1*iv3FBxte8htes9UUyIVPaw.png);'>
+        <h1 class="display-4 font-weight-bold">Eat Da Burger</h1>
+        <p class="lead font-weight-bold">Simply add a burger and devour it</p>
+    </div>
+
+    <hr>
+    
+    
+
+    {{!-- this is the burger image--}}
+    <div class="row justify-content-center">
+        <div class="col-5">
+          <img src="/assets/img/burger1.png" alt="Delicius burger" width="400" height="200">
+      
+        </div>
+    </div>
+
+    {{!-- couple of line breaks--}}
+    <br>
+
+    {{!-- list of current burgers (burger contolller passed hbsObject to here)--}}
+
+    <div class = "row justify-content-right">
+        <div class ="col-6 border-right text-right">
+          <ul style="list-style-type:none;">
+                {{#each this.burgers}}
+                     {{#unless devoured}}
+                        <li> <h4>{{burger_name}}
+                          {{!-- <button class="eatBurger btn btn-danger btn-sm"  data-id="{{this.id}}" data-eat="true">Devour It!</button> --}}
+
+                          <input type="image" src="/assets/img/pac.gif" width="25" height="25"  data-toggle="tooltip" data-placement="top" title="eat the burger" /></h4>
+                          
+                         </li><br>
+                       {{/unless}}
+               
+                {{/each}}
+            </ul>
+         </div>
+
+          {{!-- need another column here--}}
+    </div>
+
+ <br>
+
+    {{!-- this is the form to submit burger--}}
+    <div class ="row">
+        <div class="col-12 text-center">
+        <form class="create-form addBurger">
+            <div class="form-group">
+                <input type="text" class="input-lg col-6 pt-4 pr-4 text-center" id="newBurger" name="burger_name" placeholder="Enter a burger....">
+            </div>
+            <button class="btn btn-success btn-sm ml-4 addBurger" type="submit">Add Burger</button>
+        </form>
+        </div>
+    </div>
+
+</div>

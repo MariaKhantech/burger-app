@@ -1,6 +1,5 @@
-const orm = require('orm');
+//import the connection
 const connection = require('./dbConnection');
-const require = '/config/dbConnection.js';
 
 //selects all the burgers from the database
 const selectAll = (table) => {

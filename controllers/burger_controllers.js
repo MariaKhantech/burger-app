@@ -24,3 +24,5 @@ router.post('/api/burger/create', (req, res) => {
 		res.redirect('/');
 	});
 });
+
+module.exports = router;
