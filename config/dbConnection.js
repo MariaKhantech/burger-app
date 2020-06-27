@@ -1,5 +1,7 @@
 const mysql = require('mysql');
+const util = require('util');
 let connection;
+
 require('dotenv').config();
 
 //heroku port and connecting to MySQL database
@@ -19,4 +21,6 @@ connection.connect(function(err) {
 	console.log('db connected');
 });
 
+//this makes sure that queries are executed as a promise
+connection.query = util.promisify(connection.query);
 module.exports = connection;
