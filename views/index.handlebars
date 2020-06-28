@@ -33,7 +33,7 @@
                         <li> <h4>{{burger_name}}
                           {{!-- <button class="eatBurger btn btn-danger btn-sm"  data-id="{{this.id}}" data-eat="true">Devour It!</button> --}}
 
-                          <input class="buttonEatBurger1" type="image" src="/assets/img/pac.gif" width="25" height="25"  data-toggle="tooltip" data-placement="top" title="eat the burger" /></h4>
+                          <input class="buttonEatBurger1" data-id= "{{this.id}}" data-eat="true" type="image" src="/assets/img/pac.gif" width="25" height="25"  data-toggle="tooltip" data-placement="top" title="eat the burger" /></h4>
                           
                          </li><br>
                        {{/unless}}
@@ -42,7 +42,7 @@
             </ul>
          </div>
 
-          {{!-- need another column here--}}
+          {{!-- burgers that have been eaten--}}
           <div class ="col-6">
           <ul style="list-style-type:none;">
                 {{#each this.burgers}}

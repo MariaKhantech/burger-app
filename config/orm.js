@@ -18,8 +18,8 @@ const insertOne = (table, column, value) => {
 //updating a row in the database
 const updateOne = (table, columnVal, id) => {
 	//query that updates one row/burger entry in the database
-	const queryString = `UPDATE ${table} SET devoured = ? WHERE ID = ? `;
-	return connection.query(queryString, [ columnVal, id ]);
+	const queryString = `UPDATE ${table} SET devoured = ${columnVal} WHERE ID = ? `;
+	return connection.query(queryString, [ id ]);
 };
 
 //delets a row from the database(ie burger)

@@ -25,5 +25,16 @@ router.post('/api/burger/create', (req, res) => {
 	});
 });
 
-//TODO UPDATE AND DELETE ROUTES
+//route to update burger
+router.put('/api/burger/eat:id', (req, res) => {
+	console.log(req.body.eaten, req.params.id);
+	burger.updateOne(req.body.eaten, req.params.id).then((data) => {
+		if (data.changedRows == 0) {
+			return res.status(404).end();
+		} else {
+			res.status(200).end();
+		}
+	});
+});
+
 module.exports = router;

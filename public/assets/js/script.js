@@ -1,8 +1,22 @@
 $(document).ready(() => {
 	console.log('add burger app');
-	//need a eaten button
+	//
 	$('.buttonEatBurger1').on('click', (event) => {
-		console.log('pacman');
+		let id = event.target.dataset.id;
+		let eat = event.target.dataset.eat;
+		//sending put request to the back end to update the burger to be eaten.
+		let burgerEaten = {
+			eaten: eat
+		};
+
+		$.ajax('/api/burger/eat' + id, {
+			type: 'PUT',
+			data: burgerEaten
+		}).then(() => {
+			console.log('new burger created');
+			//reload the page to get the updated list from the database
+			location.reload();
+		});
 	});
 
 	//handles button click of Add Burger
