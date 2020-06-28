@@ -33,7 +33,7 @@
                         <li> <h4>{{burger_name}}
                           {{!-- <button class="eatBurger btn btn-danger btn-sm"  data-id="{{this.id}}" data-eat="true">Devour It!</button> --}}
 
-                          <input type="image" src="/assets/img/pac.gif" width="25" height="25"  data-toggle="tooltip" data-placement="top" title="eat the burger" /></h4>
+                          <input class="buttonEatBurger1" type="image" src="/assets/img/pac.gif" width="25" height="25"  data-toggle="tooltip" data-placement="top" title="eat the burger" /></h4>
                           
                          </li><br>
                        {{/unless}}
@@ -43,6 +43,18 @@
          </div>
 
           {{!-- need another column here--}}
+          <div class ="col-6">
+          <ul style="list-style-type:none;">
+                {{#each this.burgers}}
+                     {{#if devoured}}
+                        <li class = "text-secondary">{{burger_name}}  
+                            <button class="btn btn-link btn-sm deleteBurger" data-id="{{this.id}}" role="button">(delete)</a>
+                        </li><br>
+                       {{/if}}
+               
+                {{/each}}
+            </ul>
+         </div>
     </div>
 
  <br>
@@ -54,7 +66,7 @@
             <div class="form-group">
                 <input type="text" class="input-lg col-6 pt-4 pr-4 text-center" id="newBurger" name="burger_name" placeholder="Enter a burger....">
             </div>
-            <button class="btn btn-success btn-sm ml-4 addBurger" type="submit">Add Burger</button>
+            <button class="btn btn-success btn-sm ml-4 addBurger"  type="submit">Add Burger</button>
         </form>
         </div>
     </div>

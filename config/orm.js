@@ -11,7 +11,7 @@ const selectAll = (table) => {
 //inserts a burger to the database
 const insertOne = (table, column, value) => {
 	//query that inserts a burger into the database
-	const queryString = `INSERT INTO ${table} (${column.tostring()}) VALUES (?,?)`;
+	const queryString = `INSERT INTO ${table} (${column.toString()}) VALUES (?,?)`;
 	return connection.query(queryString, [ value, false ]);
 };
 

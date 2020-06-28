@@ -17,6 +17,6 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 // once the route directory has been required, app.use takes two arguments, the path fragment and the directory that will be used after hitting that portion of the route.  In this case, if the user hits the base url, express will then look to the index file in the routes directory to direct traffic beyond that base url.
-app.use('/', routes);
+app.use(routes);
 
 app.listen(PORT, () => console.log(`server listening on port ${PORT}`));
