@@ -13,6 +13,7 @@ const updateOne = (columnVal, id) => {
 };
 
 const deleteOne = (id) => {
+	console.log('string' + id);
 	return orm.deleteOne('burger', id);
 };
 

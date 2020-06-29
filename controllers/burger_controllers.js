@@ -17,9 +17,7 @@ router.get('/', (req, res) => {
 
 //POST inserts a new burger into the database
 router.post('/api/burger/create', (req, res) => {
-	console.log(req.body.name);
 	burger.insertOne([ 'burger_name', 'devoured' ], req.body.name).then((data) => {
-		console.log(data);
 		//directs the server to go fetch the latest burgers by redirecting it to do the GET again
 		res.redirect('/');
 	});
@@ -27,9 +25,20 @@ router.post('/api/burger/create', (req, res) => {
 
 //route to update burger
 router.put('/api/burger/eat:id', (req, res) => {
-	console.log(req.body.eaten, req.params.id);
 	burger.updateOne(req.body.eaten, req.params.id).then((data) => {
 		if (data.changedRows == 0) {
+			return res.status(404).end();
+		} else {
+			res.status(200).end();
+		}
+	});
+});
+
+//route to delete the burger
+router.delete('/api/burger/delete:id', (req, res) => {
+	console.log('making it');
+	burger.deleteOne(req.params.id).then((data) => {
+		if (data.affectedRows == 0) {
 			return res.status(404).end();
 		} else {
 			res.status(200).end();

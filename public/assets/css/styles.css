@@ -1,0 +1,12 @@
+.jumbotron {
+	background-image: url(https://miro.medium.com/max/1400/1*iv3FBxte8htes9UUyIVPaw.png);
+	border: 20px;
+	border-style: double;
+	border-color: white;
+}
+
+#newBurger {
+	border: 10px;
+	border-style: double;
+	border-color: black;
+}

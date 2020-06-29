@@ -22,7 +22,7 @@ const updateOne = (table, columnVal, id) => {
 	return connection.query(queryString, [ id ]);
 };
 
-//delets a row from the database(ie burger)
+//deletes a row from the database(ie burger)
 const deleteOne = (table, id) => {
 	//query that deletes a burger from the database
 	const queryString = `DELETE FROM ${table} WHERE ID = ? `;

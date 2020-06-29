@@ -1,5 +1,4 @@
 $(document).ready(() => {
-	console.log('add burger app');
 	//
 	$('.buttonEatBurger1').on('click', (event) => {
 		let id = event.target.dataset.id;
@@ -13,7 +12,6 @@ $(document).ready(() => {
 			type: 'PUT',
 			data: burgerEaten
 		}).then(() => {
-			console.log('new burger created');
 			//reload the page to get the updated list from the database
 			location.reload();
 		});
@@ -28,8 +26,19 @@ $(document).ready(() => {
 
 		//send the post request to the API route, the route is defined in the burger controller
 		$.post('/api/burger/create', { name: newBurger }).then(() => {
-			console.log('new burger created');
 			//reload the page to get the updated list from the database
+			location.reload();
+		});
+	});
+
+	//handles button that deletes burgers on click
+	$('.deleteBurger').on('click', (event) => {
+		let id = event.target.dataset.id;
+		console.log('clicked');
+		$.ajax('/api/burger/delete' + id, {
+			type: 'DELETE'
+		}).then(() => {
+			console.log('reload me');
 			location.reload();
 		});
 	});
