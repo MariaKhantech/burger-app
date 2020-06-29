@@ -11,10 +11,10 @@
     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/357d7355-2ae2-46a4-a689-c7b84061c7a9/dcpiyby-d4a1334d-7198-4f8d-bb63-f49d42935fe8.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMzU3ZDczNTUtMmFlMi00NmE0LWE2ODktYzdiODQwNjFjN2E5XC9kY3BpeWJ5LWQ0YTEzMzRkLTcxOTgtNGY4ZC1iYjYzLWY0OWQ0MjkzNWZlOC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.gDvez5mVL0eMPAGRqKyDgILkAj3jRJt0x-uCEMR7HuI" alt="pacman burger" width="125" height="100">
   </a>
 
-  <h3 align="center">Employee Tracker</h3>
+  <h3 align="center">Pacman burger Feeder</h3>
 
   <p align="center">
-    An awesome way you can keep track of your employees!
+   A fun way to create burgers that pacman will enjoy!
 </p>
 
 
